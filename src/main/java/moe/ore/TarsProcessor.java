@@ -79,7 +79,8 @@ public class TarsProcessor extends AbstractProcessor {
                 }
 
                 // TODO: 2021/7/18 因为读取要传入字段类型 如果在 kt 里面的话 lateinit 修饰符的字段会报错
-                // TODO: 2021/7/18 在 kt 里面 字段默认修饰符 是 private 的 需要添加 @JvmField 才能在生成的类去访问 否则需要去调用他生成的 get set 方法。 如果调用 get 方法会导致不能在 kt check 代码之前判断字段是否为 null 然后报错 最佳解决办法就是 让 @TarsId 注解去'继承' @JvmField 来实现一个注解两个效果 但是似乎没成功
+                // TODO: 2021/7/18 在 kt 里面 字段默认修饰符 是 private 的 需要添加 @JvmField 才能在生成的类去访问 否则需要去调用他生成的 get set 方法。
+                //  如果调用 get 方法会导致不能在 kt check 代码之前判断字段是否为 null 然后报错 最佳解决办法就是 让 @TarsId 注解去'继承' @JvmField 来实现一个注解两个效果 但是似乎没成功
 //                boolean isObject = typeUtils.isSubtype(element1.asType(), elementUtils.getTypeElement("java.lang.Object").asType());
 //                if (isObject) {
 //                    readFromBuilder.beginControlFlow("if($L!=null)", element1.getSimpleName().toString());

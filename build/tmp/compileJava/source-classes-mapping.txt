@@ -1,0 +1,8 @@
+moe/ore/TarsProcessor.java
+ moe.ore.TarsProcessor
+moe/ore/Tars.java
+ moe.ore.Tars
+moe/ore/TarsClassFieIdKV.java
+ moe.ore.TarsClassFieIdKV
+moe/ore/TarsId.java
+ moe.ore.TarsId

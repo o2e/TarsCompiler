@@ -1,0 +1,20 @@
+plugins {
+    id 'java'
+    id 'java-library'
+}
+
+group 'moe.ore'
+version '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'com.google.auto.service:auto-service:1.0' //自动注册注解处理器
+    implementation 'com.squareup:javapoet:1.13.0' //javapoet代码生成框架
+}
+
+test {
+    useJUnitPlatform()
+}
